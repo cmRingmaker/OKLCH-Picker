@@ -1,0 +1,11 @@
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="darkModeCheckerboard" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="10" height="10" fill="#333333"/>
+      <rect x="10" y="10" width="10" height="10" fill="#333333"/>
+      <rect x="10" y="0" width="10" height="10" fill="#444444"/>
+      <rect x="0" y="10" width="10" height="10" fill="#444444"/>
+    </pattern>
+  </defs>
+  <rect width="40" height="40" fill="url(#darkModeCheckerboard)"/>
+</svg>

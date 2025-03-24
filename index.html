@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='description'
+    content='An interactive OKLCH color picker for designers and developers to explore and convert colors to other color spaces.'>
+  <meta name='keywords'
+    content='OKLCH, color picker, color converter, web design, color tool, oklch generator'>
+  <meta name='author' content='Ringmaker'>
+  <meta name='og:title' content='OKLCH Color Picker | Explore and Convert Colors'>
+  <meta name='og:description'
+    content='An interactive OKLCH color picker for designers and developers to explore and convert colors to other color spaces.'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>OKLCH Picker</title>
+
+  <!-- external CSS link -->
+  <link rel='stylesheet' href='css/reset.css'>
+  <link rel='stylesheet' href='css/style.css'>
+
+  <!-- Favicon -->
+  <link rel='icon' type='image/png' href='/assets/favicon.png'>
+</head>
+
+<body>
+  <main>
+    <!-- OKLCH Hero Container -->
+    <section id='hero' class='color-container' data-color-type='oklch' data-l='50' data-c='0.2'
+      data-h='184' data-a='100'>
+      <div class='color-preview'></div>
+      <h1 id='okh1'></h1>
+    </section>
+
+    <!-- Range Sliders -->
+    <div id='slider-container'>
+      <label for='l-slider'>Lightness: <span id='l-value'></span></label>
+      <input type='range' id='l-slider' aria-label='Lightness' min='0' max='100' step='0.05'
+        value='50'>
+
+      <label for='c-slider'>Chroma: <span id='c-value'></span></label>
+      <input type='range' id='c-slider' aria-label='Chroma' min='0' max='0.4' step='0.01'
+        value='0.2'>
+
+      <label for='h-slider'>Hue: <span id='h-value'></span></label>
+      <input type='range' id='h-slider' aria-label='Hue' min='0' max='360' value='184'>
+
+      <label for='a-slider'>Alpha: <span id='a-value'></span></label>
+      <input type='range' id='a-slider' aria-label='Alpha' min='0' max='100' value='100'>
+      <span></span>
+    </div>
+
+    <!-- OKLCH Container -->
+    <section id='oklch-container' class='color-container' data-color-type='oklch' data-l='50'
+      data-c='0.2' data-h='184' data-a='100'>
+      <span class='color-text'>OKLCH</span>
+      <div class='color-preview'></div>
+      <h2 id='okh2'>(100% 0.4 360)</h2>
+    </section>
+
+    <!-- HEX Container -->
+    <section id='hex-container' class='color-container' data-color-type='hex' data-hex='#00BC78'>
+      <span class='color-text'>HEX</span>
+      <div class='color-preview'></div>
+      <h2 id='hexh2'></h2>
+    </section>
+
+    <!-- RGBA Container -->
+    <section id='rgba-container' class='color-container' data-color-type='rgba' data-r='0'
+      data-g='188' data-b='120' data-a='1'>
+      <span class='color-text'>RGB</span>
+      <div class='color-preview'></div>
+      <h2 id='rgbah2'></h2>
+    </section>
+
+    <!-- HSLA Container -->
+    <section id='hsla-container' class='color-container' data-color-type='hsla' data-h='160'
+      data-s='100' data-l='37' data-a='1'>
+      <span class='color-text'>HSL</span>
+      <div class='color-preview'></div>
+      <h2 id='hslah2'></h2>
+    </section>
+
+    <!-- Input Converter -->
+    <fieldset aria-label='Color Conversion'>
+      <label for='color-input'>Convert</label>
+      <input type='text' id='color-input' placeholder='hex, rgb, hsl, oklch'>
+      <button aria-label='Convert Color'>CONVERT</button>
+    </fieldset>
+
+    <div id='copy-feedback' data-state='hidden' aria-live='polite'></div>
+  </main>
+
+  <footer>
+    <a href='https://cmringmaker.github.io'>@Ringmaker</a>
+    |
+    <a href='https://github.com/cmRingmaker'>@Github</a>
+  </footer>
+
+  <!-- external JavaScript link -->
+  <script type='module' src='js/main.js'></script>
+</body>
+
+</html>
