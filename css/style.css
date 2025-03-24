@@ -25,7 +25,7 @@
 
 @font-face {
 	font-family: 'Glacial Indifference';
-	src: url(/assets/GlacialIndifference-Regular.otf) format('opentype');
+	src: url(../assets/GlacialIndifference-Regular.otf) format('opentype');
 	font-display: swap;
 }
 
@@ -143,7 +143,7 @@ main {
 	width: 500px;
 	cursor: copy;
 	position: relative;
-	background-image: url(/assets/background.svg);
+	background-image: url(../assets/background.svg);
 	background-size: 33px 33px;
 
 	.color-text {
